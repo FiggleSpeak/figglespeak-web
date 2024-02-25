@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .icon-filled {
+    font-variation-settings: 'FILL' 1;
+  }
+}
+
+/* account for address bar on mobile */
+.h-screen {
+  height: 100dvh;
+}
+
+.absolute-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url(./fonts/Sora-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url(./fonts/Sora-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url(./fonts/Sora-SemiBold.ttf);
+  font-weight: 600;
+}
+
+* {
+  color: #f0f0f0;
+  font-family: 'Sora';
+  line-height: 1.5;
+}
+
+body {
+  background-color: #222;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+input {
+  background: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4); 
+  border-radius: 3px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* modal transition */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 400ms ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
